@@ -12,7 +12,16 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        "🔥 Welcome to BILAL PANEL SHOP 🔥\n\n"
-        "Choose an option below.",
-        reply_markup=reply_markup,
-    )
+    "🔥 *WELCOME TO BILAL PANEL SHOP* 🔥\n\n"
+    "👋 Welcome!\n\n"
+    "🛒 Premium Digital Products\n"
+    "⚡ Fast Delivery\n"
+    "🔒 Secure Payments\n"
+    "💬 24/7 Customer Support\n\n"
+    "━━━━━━━━━━━━━━━━━━━━━━\n"
+    "📞 Support: @BILALPANEL3\n"
+    "━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    "👇 *Choose an option below* 👇",
+    reply_markup=reply_markup,
+    parse_mode="Markdown"
+)
