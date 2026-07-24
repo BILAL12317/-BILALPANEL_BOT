@@ -36,7 +36,21 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
+async def remove_bg(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    photo = update.message.photo[-1]
+    file = await photo.get_file()
 
+    image_bytes = BytesIO()
+    await file.download_to_memory(image_bytes)
+    image_bytes.seek(0)
+
+    output = remove(image_bytes.read())
+
+    result = BytesIO(output)
+    result.name = "removed_bg.png"
+    result.seek(0)
+
+    await update.message.reply_document(document=result)
     if query.data == "buy":
         text = "🛒 Buy Panel\n\nSelect your plan."
     elif query.data == "price":
