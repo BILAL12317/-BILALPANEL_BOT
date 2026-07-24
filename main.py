@@ -7,7 +7,9 @@ from telegram.ext import (
     CallbackQueryHandler,
     ContextTypes,
 )
-
+from telegram.ext import MessageHandler, filters
+from rembg import remove
+from io import BytesIO
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
