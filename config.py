@@ -1,7 +1,7 @@
 import os
 
 # Bot Configuration
-BOT_TOKEN = "8844663921:AAE8xpgYFxXwS3XgNu6IfYXe4Y0XqSiohr0"
+BOT_TOKEN = "8844663921:AAF79nG-ghuFNA_-wMkGbm0eRnad4ynZFR4"
 
 # Admin Telegram ID
 ADMIN_ID = 5053534694
