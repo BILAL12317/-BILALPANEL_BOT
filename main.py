@@ -37,6 +37,29 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
+    if query.data == "buy":
+        text = "🛒 Buy Panel\n\nSelect your plan."
+
+    elif query.data == "price":
+        text = (
+            "💰 Price List\n\n"
+            "1 Day - ₹60\n"
+            "3 Days - ₹130\n"
+            "7 Days - ₹220\n"
+            "15 Days - ₹460\n"
+            "30 Days - ₹700"
+        )
+
+    elif query.data == "payment":
+        text = "💳 UPI ID:\nmohamedbilal20116-1@okicici"
+
+    elif query.data == "contact":
+        text = "📞 Support: @BILALPANEL3"
+
+    else:
+        text = "Unknown option."
+
+    await query.edit_message_text(text)
 async def remove_bg(update: Update, context: ContextTypes.DEFAULT_TYPE):
     photo = update.message.photo[-1]
     file = await photo.get_file()
