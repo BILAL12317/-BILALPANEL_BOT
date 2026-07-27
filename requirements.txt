@@ -1,6 +1,6 @@
 python-telegram-bot==21.6
 firebase-admin==6.5.0
-pytpython-telegram-bot
 Pillow
 rembg
-onnxruntimehon-dotenv==1.0.1
+onnxruntime
+python-dotenv==1.0.1
