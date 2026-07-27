@@ -101,6 +101,3 @@ def main():
 
     print("✅ BILAL PANEL SHOP Bot Started")
     app.run_polling()
-
-if __name__ == "__main__":
-    main()
