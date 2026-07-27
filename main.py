@@ -70,22 +70,6 @@ async def remove_bg(update: Update, context: ContextTypes.DEFAULT_TYPE):
         text = "Unknown option."
 
     await query.edit_message_text(text)
-
-async def remove_bg(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    photo = update.message.photo[-1]
-    file = await photo.get_file()
-
-    image_bytes = BytesIO()
-    await file.download_to_memory(image_bytes)
-    image_bytes.seek(0)
-
-    output = remove(image_bytes.read())
-
-    result = BytesIO(output)
-    result.name = "removed_bg.png"
-    result.seek(0)
-
-    await update.message.reply_document(document=result)
 def main():
     app = Application.builder().token(BOT_TOKEN).build()
 
