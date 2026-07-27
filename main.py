@@ -79,7 +79,6 @@ def main():
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button))
-   app.add_handler(MessageHandler(filters.PHOTO, remove_bg))
+    app.add_handler(MessageHandler(filters.PHOTO, remove_bg))
 
-    print("✅ BILAL PANEL SHOP Bot Started")
     app.run_polling()
