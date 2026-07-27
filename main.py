@@ -31,9 +31,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup(keyboard),
     )
-    if query.data == "buy":
-        text = "🛒 Buy Panel\n\nSelect your plan."
-
+    
 async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
